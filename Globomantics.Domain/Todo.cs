@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-
-namespace Globomantics.Domain;
+﻿namespace Globomantics.Domain;
 
 public abstract record Todo(Guid Id, 
     string Title,
@@ -9,5 +7,5 @@ public abstract record Todo(Guid Id,
     bool IsCompleted = false,
     bool IsDeleted = false)
 {
-    public Todo? Parent {  get; set; }  
+    public Todo? Parent {  get; init; }  
 }

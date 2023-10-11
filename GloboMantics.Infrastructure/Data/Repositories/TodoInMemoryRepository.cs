@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
 namespace GloboMantics.Infrastructure.Data.Repositories;
-internal class TodoInMemoryRepository<T> : IRepository<T> where T : Todo
+public class TodoInMemoryRepository<T> : IRepository<T> where T : Todo
 {
     private ConcurrentDictionary<Guid, T> Items {get;} = new();
     public Task AddAsync(T item)
@@ -38,7 +38,7 @@ internal class TodoInMemoryRepository<T> : IRepository<T> where T : Todo
 
     }
 
-    public Task GetAsync(Guid id)
+    public Task<T> GetAsync(Guid id)
     {
         return Task.FromResult(Items[id]);
     }

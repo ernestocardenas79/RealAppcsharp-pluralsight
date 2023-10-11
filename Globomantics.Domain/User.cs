@@ -1,3 +1,5 @@
 ﻿namespace Globomantics.Domain;
 
-public record User(Guid id, string name);
+public record User(string Name) {
+   public Guid Id { get; set; } = Guid.NewGuid();
+};

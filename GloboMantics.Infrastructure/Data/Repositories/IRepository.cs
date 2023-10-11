@@ -7,5 +7,5 @@ public interface IRepository<T>
     Task<IEnumerable<T>> AllAsync();
     Task AddAsync(T item);
     Task SaveChangesAsync();
-    Task GetAsync(Guid id);
+    Task<T> GetAsync(Guid id);
 }

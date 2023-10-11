@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Globomantics.Domain\Globomantics.Domain.csproj" />
+    <ProjectReference Include="..\GloboMantics.Infrastructure\Globomantics.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
